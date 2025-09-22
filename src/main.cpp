@@ -47,13 +47,13 @@ void loop() {
 
   // ----------------------------------------------------------------------------------------------------
 
-  // O ldr vai funcionar como um relógio, sendo que determinada quantidade de luz vai representar um horário do dia. Seu valor varia de 0 a 1023, sendo que quando ele é menor ou igual a 155, seu led irá acender indicando que está na situação adequada
+  // O ldr vai funcionar como um relógio, sendo que determinada quantidade de luz vai representar um horário do dia. Seu valor varia de 0 a 1023, sendo que quando ele é menor ou igual a 200, seu led irá acender indicando que está na situação adequada
   valor_ldr = analogRead(ldr);
 
   Serial.println(valor_ldr);
   delay(1000);
 
-  if (valor_ldr <= 115){
+  if (valor_ldr <= 200){
     digitalWrite(ledL, HIGH);
     condicao_horario = true;
   }
@@ -83,3 +83,4 @@ void loop() {
     digitalWrite(rele, HIGH);
 
 }
+
