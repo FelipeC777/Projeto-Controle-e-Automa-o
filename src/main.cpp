@@ -30,7 +30,7 @@ void setup() {
 }
 
 void loop() {
-  // O potenciometro vai simular a umidade do ambiente. Seu valor varia de 0 a 5, sendo que quando ele é menor ou igual a 2, seu led irá acender indicando que está na situação adequada
+  // O potenciometro vai simular a umidade do ambiente. Seu valor varia de 0 a 5, sendo que quando ele é menor que 2, seu led irá acender indicando que está na situação adequada
   valor_pot = analogRead(pot);
   valor_pot_convertido = map(valor_pot,0,1025,0,5);
   Serial.println(valor_pot_convertido);
@@ -47,7 +47,7 @@ void loop() {
 
   // ----------------------------------------------------------------------------------------------------
 
-  // O ldr vai funcionar como um relógio, sendo que determinada quantidade de luz vai representar um horário do dia. Seu valor varia de 0 a 1023, sendo que quando ele é menor ou igual a 1000, seu led irá acender indicando que está na situação adequada
+  // O ldr vai funcionar como um relógio, sendo que determinada quantidade de luz vai representar um horário do dia. Seu valor varia de 0 a 1023, sendo que quando ele é menor ou igual a 155, seu led irá acender indicando que está na situação adequada
   valor_ldr = analogRead(ldr);
 
   Serial.println(valor_ldr);
@@ -81,4 +81,5 @@ void loop() {
     digitalWrite(rele, LOW);
   else
     digitalWrite(rele, HIGH);
+
 }
