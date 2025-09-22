@@ -15,7 +15,7 @@
 
 - O potenciômetro vai simular a umidade do sistema. Seu valor está convertido em uma escala de 0 a 5, e sempre que ele está abaixo de 2, o led verde irá acender, indicando a condição adequada de umidade.
 
-- O LDR vai simular um horário do dia através de determinada quantidade de luz. Se seu valor for menor ou igual a 115, o led vermelho irá acender, indicando que este é o horário adequado.
+- O LDR vai simular um horário do dia através de determinada quantidade de luz. Se seu valor for menor ou igual a 200, o led vermelho irá acender, indicando que este é o horário adequado.
 
 - O botão funcionará como uma trava do sistema. Enquanto ele não for pressionado, o usuário pode simular os valores de umidade e luz, mas o relé não será ativado. Caso ele for pressionado, o led amarelo irá acender o sistema vai destravar e estará disponível para uso.
 
